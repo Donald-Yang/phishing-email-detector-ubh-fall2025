@@ -1,0 +1,30 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.readonly",
+    "https://www.googleapis.com/auth/gmail.modify"
+  ],
+  "addOns": {
+    "common": {
+      "name": "No Phishing Allowed",
+      "logoUrl": "https://ssl.gstatic.com/docs/script/images/logo.png"
+    },
+    "gmail": {
+      "name": "No Phishing Allowed",
+      "logoUrl": "https://ssl.gstatic.com/docs/script/images/logo.png",
+      "primaryColor": "#d93025",
+      "secondaryColor": "#ffffff",
+      "contextualTriggers": [
+        {
+          "unconditional": {},
+          "onTriggerFunction": "getContextualAddOn"
+        }
+      ],
+      "authorizationCheckFunction": "getContextualAddOn"
+    }
+  }
+}
